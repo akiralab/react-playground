@@ -8,7 +8,17 @@ import './index.css';
 // Create react component
 
 const App = () => {
-  return <div>Hi there!</div>;
+
+  const buttonText = 'Click Me!'
+  return (
+    <div>
+      <label className="label" for='name'>Enter name: </label>
+      <input id ="name" type="text" />
+      <button style={{ backgroundColor: 'blue', color: 'white' }}>
+        {buttonText}
+      </button>
+    </div>
+    );
 };
 
 ReactDOM.render(<App />, document.querySelector('#root'));
