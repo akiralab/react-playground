@@ -9,14 +9,30 @@ import './index.css';
 
 const App = () => {
 
-  const buttonText = 'Click Me!'
+  const buttonText = {text: 'Print me!'}
+  const labelText = 'Enter Text'
+  const cssStyle = { backgroundColor: 'blue', color: 'white' }
+
+  function getTime() {
+    return (new Date().toLocaleDateString())
+  }
+
   return (
     <div>
-      <label className="label" for='name'>Enter name: </label>
+
+      <label className="label" htmlFor='name'>
+        {labelText}
+      </label>
+
       <input id ="name" type="text" />
-      <button style={{ backgroundColor: 'blue', color: 'white' }}>
-        {buttonText}
+
+      <button style={cssStyle}>
+        {buttonText.text}
       </button>
+      <br></br>
+      <label>
+        Current Time: {getTime()}
+      </label>
     </div>
     );
 };
